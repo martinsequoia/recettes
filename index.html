@@ -8,25 +8,20 @@
     h2 { margin-top: 30px; color: #444; border-bottom: 1px solid #eee; }
     .meta { background: #f9f9f9; padding: 15px; border: 1px solid #ddd; margin-bottom: 25px; font-size: 0.9em; }
     .meta strong { color: #000; }
-    
-    /* Style du Tableau */
     table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.95em; }
     th { background-color: #f2f2f2; position: sticky; top: 0; }
     th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
     tr:hover { background-color: #f5f5f5; }
-    
-    /* Barre de recherche */
     input#searchBar { width: 100%; padding: 12px; margin-bottom: 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-    
     a { color: #0056b3; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .btn-retour { display: inline-block; margin-bottom: 20px; font-size: 0.85em; color: #666; }
-    .source-tag { font-size: 0.85em; color: #666; font-style: italic; }
+    .source-tag { font-size: 0.85em; color: #666; }
 </style>
 <title>Mes Recettes</title></head>
     <body>
-        <h1>📚 Mes Recettes (65)</h1>
-        <input type="text" id="searchBar" onkeyup="filterTable()" placeholder="Rechercher (Titre, Saison, Source, Ingrédient)...">
+        <h1>📚 Mes Recettes (66)</h1>
+        <input type="text" id="searchBar" onkeyup="filterTable()" placeholder="Rechercher...">
         <table id="myTable">
             <thead>
                 <tr>
@@ -43,6 +38,7 @@
             <td>Plat principal</td>
             <td>Automne/Hiver</td>
             <td class="source-tag">Création maison</td>
+            <td style="display:none;">Création maison</td>
         </tr>
         
         <tr>
@@ -50,6 +46,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette adaptée</td>
+            <td style="display:none;">Recette adaptée</td>
         </tr>
         
         <tr>
@@ -57,6 +54,7 @@
             <td>Plat principal</td>
             <td>Automne/Hiver</td>
             <td class="source-tag">Inspiré classique</td>
+            <td style="display:none;">Inspiré classique</td>
         </tr>
         
         <tr>
@@ -64,6 +62,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Création maison</td>
+            <td style="display:none;">Création maison</td>
         </tr>
         
         <tr>
@@ -71,55 +70,63 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Keto Instant Pot recipes p 150</td>
+            <td style="display:none;">Keto Instant Pot recipes p 150</td>
         </tr>
         
         <tr>
             <td><a href='recettes/agneau/agneau_-_lamb_stew_with_dill_sauce_and_green_beans.html'><strong>Agneau - Lamb stew with dill sauce and green beans</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-lamb-stew-with-dill-sauce-and-green-beans</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-lamb-stew-with-dill-sauce-and-green-beans' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-lamb-stew-with-dill-sauce-and-green-beans</td>
         </tr>
         
         <tr>
             <td><a href='recettes/agneau/agneau_-_keto_sheppards_pie.html'><strong>Agneau - Keto Sheppard's pie</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-shepherds-pie/servings/8</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-shepherds-pie/servings/8' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-shepherds-pie/servings/8</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_bacon_burger_casserole.html'><strong>Boeuf - Bacon burger casserole</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-bacon-burger-casserole</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-bacon-burger-casserole' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-bacon-burger-casserole</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_bacon-wrapped_meatloaf.html'><strong>Boeuf - Bacon-wrapped meatloaf</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/bacon-wrapped-keto-meatloaf</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/bacon-wrapped-keto-meatloaf' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/bacon-wrapped-keto-meatloaf</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_boeuf_bourguignon_with_cauliflower_mash.html'><strong>Boeuf - Boeuf Bourguignon with cauliflower mash</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/boeuf-bourguignon-cauliflower-mash/servings/8</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/boeuf-bourguignon-cauliflower-mash/servings/8' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/boeuf-bourguignon-cauliflower-mash/servings/8</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_burger_tex-mex_et_avocats.html'><strong>Boeuf - Burger tex-mex et avocats</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-tex-mex-burger-plate/servings/4</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-tex-mex-burger-plate/servings/4' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-tex-mex-burger-plate/servings/4</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_burger_with_fried_cabbage_and_tomato_sauce.html'><strong>Boeuf - Burger with fried cabbage and tomato sauce</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-hamburger-patties-tomato-sauce-cabbage</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-hamburger-patties-tomato-sauce-cabbage' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-hamburger-patties-tomato-sauce-cabbage</td>
         </tr>
         
         <tr>
@@ -127,34 +134,39 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Voir recette</td>
+            <td style="display:none;">Voir recette</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_keto_oven-baked_meatballs_with_cauliflower_slaw.html'><strong>Boeuf - Keto Oven-baked meatballs with cauliflower slaw</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-oven-baked-meatballs-with-cauliflower-slaw/servings/8</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-oven-baked-meatballs-with-cauliflower-slaw/servings/8' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-oven-baked-meatballs-with-cauliflower-slaw/servings/8</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_sauté_de_choux_(style_asiatique)_/_wasabi.html'><strong>Boeuf - Sauté de choux (style asiatique) / wasabi</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-asian-cabbage-stir-fry</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-asian-cabbage-stir-fry' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-asian-cabbage-stir-fry</td>
         </tr>
         
         <tr>
             <td><a href='recettes/boeuf/boeuf_-_soupe_boeuf_et_choux.html'><strong>Boeuf - Soupe boeuf et choux</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/laplandic-beef-cabbage-soup/servings/8</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/laplandic-beef-cabbage-soup/servings/8' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/laplandic-beef-cabbage-soup/servings/8</td>
         </tr>
         
         <tr>
             <td><a href='recettes/canard/canard_-_roti_de_canard.html'><strong>Canard - Roti de canard</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://canardsdulacbrome.com/recettes/roti-de-canard-au-paprika-et-aux-legumes-grilles/</td>
+            <td class="source-tag"><a href='https://canardsdulacbrome.com/recettes/roti-de-canard-au-paprika-et-aux-legumes-grilles/' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://canardsdulacbrome.com/recettes/roti-de-canard-au-paprika-et-aux-legumes-grilles/</td>
         </tr>
         
         <tr>
@@ -162,111 +174,127 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">s/o</td>
+            <td style="display:none;">s/o</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poissons/poisson_-_butter_baked_cod_with_brussels_sprouts_and_mushrooms.html'><strong>Poisson - Butter baked cod with brussels sprouts and mushrooms</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/butter-baked-fish-with-brussels-sprouts-and-mushrooms</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/butter-baked-fish-with-brussels-sprouts-and-mushrooms' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/butter-baked-fish-with-brussels-sprouts-and-mushrooms</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poissons/poisson_-_fish_taco_bowl.html'><strong>Poisson - Fish taco bowl</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/low-carb-fish-taco-bowl</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/low-carb-fish-taco-bowl' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/low-carb-fish-taco-bowl</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poissons/poisson_-_saumon_frit_avec_brocoli_et_mayo.html'><strong>Poisson - Saumon frit avec brocoli et mayo</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-fried-salmon-broccoli-lemon-mayo</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-fried-salmon-broccoli-lemon-mayo' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-fried-salmon-broccoli-lemon-mayo</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poissons/poisson_-_thai_au_cari_et_noix_de_coco.html'><strong>Poisson - Thai au cari et noix de coco</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-thai-fish-curry-coconut</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-thai-fish-curry-coconut' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-thai-fish-curry-coconut</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/porc_-_parmesan_pork_(mijoteuse_ou_instant_pot).html'><strong>Porc - Parmesan pork (mijoteuse ou instant pot)</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/instant-pot-parmesan-pork/servings/10</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/instant-pot-parmesan-pork/servings/10' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/instant-pot-parmesan-pork/servings/10</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/porc_-_pork_tenderloin_with_bue_cheese_sprouts.html'><strong>Porc - Pork tenderloin with bue cheese sprouts</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/pork-loin-roast-with-blue-cheese-sprouts</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/pork-loin-roast-with-blue-cheese-sprouts' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/pork-loin-roast-with-blue-cheese-sprouts</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/porc_-_pork_tenderloin_with_curry_sauce.html'><strong>Porc - Pork tenderloin with curry sauce</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/pork-tenderloin-curry-sauce</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/pork-tenderloin-curry-sauce' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/pork-tenderloin-curry-sauce</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/porc_-_low-carb_bacon-wrapped_tenderloin_with_roasted_garlic_mash.html'><strong>Porc - Low-carb bacon-wrapped tenderloin with roasted garlic mash</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-bacon-wrapped-tenderloin-roasted-garlic-mash/servings/8</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-bacon-wrapped-tenderloin-roasted-garlic-mash/servings/8' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-bacon-wrapped-tenderloin-roasted-garlic-mash/servings/8</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_bacon-wrapped_chicken_breast_with_cauliflower_purée.html'><strong>Poulet - Bacon-wrapped chicken breast with cauliflower purée</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/bacon-wrapped-chicken-breast-with-cauliflower-puree</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/bacon-wrapped-chicken-breast-with-cauliflower-puree' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/bacon-wrapped-chicken-breast-with-cauliflower-puree</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_poitrine_sur_zoodles_fromagé.html'><strong>Poulet - Poitrine sur zoodles fromagé</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/stuffed-chicken-breast-zoodles-tomato-sauce</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/stuffed-chicken-breast-zoodles-tomato-sauce' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/stuffed-chicken-breast-zoodles-tomato-sauce</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_chicken_with_roasted_vegetables_tricolore.html'><strong>Poulet - Chicken with roasted vegetables Tricolore</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-chicken-roasted-vegetables-tricolore</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-chicken-roasted-vegetables-tricolore' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-chicken-roasted-vegetables-tricolore</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_entier_roti_au_four.html'><strong>Poulet - Entier roti au four</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-oven-baked-chicken-garlic-butter/servings/6</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-oven-baked-chicken-garlic-butter/servings/6' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-oven-baked-chicken-garlic-butter/servings/6</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_frit_au_brocoli_et_au_beurre.html'><strong>Poulet - Frit au brocoli et au beurre</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-fried-chicken-broccoli-butter</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-fried-chicken-broccoli-butter' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-fried-chicken-broccoli-butter</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_instant_pot_-_hauts_de_cuisse_ou_poitrines_(décongelés).html'><strong>Poulet - Instant Pot - Hauts de cuisse ou poitrines (décongelés)</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://amindfullmom.com/instant-pot-chicken-thighs/</td>
+            <td class="source-tag"><a href='https://amindfullmom.com/instant-pot-chicken-thighs/' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://amindfullmom.com/instant-pot-chicken-thighs/</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_keto_chicken_provençal.html'><strong>Poulet - Keto chicken provençal</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-chicken-provencale/servings/6</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-chicken-provencale/servings/6' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-chicken-provencale/servings/6</td>
         </tr>
         
         <tr>
@@ -274,48 +302,55 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">s/o</td>
+            <td style="display:none;">s/o</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_keto_indian_butter_chicken.html'><strong>Poulet - Keto Indian butter chicken</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/indian-butter-chicken</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/indian-butter-chicken' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/indian-butter-chicken</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_poitrine,_paprika_avec_rutabaga.html'><strong>Poulet - Poitrine, paprika avec rutabaga</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/oven-baked-paprika-chicken-with-rutabaga</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/oven-baked-paprika-chicken-with-rutabaga' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/oven-baked-paprika-chicken-with-rutabaga</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_portugais_(ricardo).html'><strong>Poulet - Portugais (Ricardo)</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.ricardocuisine.com/recettes/7568-poulet-portugais-express</td>
+            <td class="source-tag"><a href='https://www.ricardocuisine.com/recettes/7568-poulet-portugais-express' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.ricardocuisine.com/recettes/7568-poulet-portugais-express</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_poulet_buffalo_avec_mayo_au_paprika_et_chou_frit_dans_le_beurre.html'><strong>Poulet - Poulet Buffalo avec mayo au paprika et chou frit dans le beurre</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/buffalo-chicken-paprika-mayo-butter-fried-cabbage</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/buffalo-chicken-paprika-mayo-butter-fried-cabbage' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/buffalo-chicken-paprika-mayo-butter-fried-cabbage</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_ragout_au_cari.html'><strong>Poulet - Ragout au cari</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/keto-chicken-curry-stew</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/keto-chicken-curry-stew' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/keto-chicken-curry-stew</td>
         </tr>
         
         <tr>
             <td><a href='recettes/poulet/poulet_-_sweet_and_sticky_chicken_wings.html'><strong>Poulet - Sweet and sticky chicken wings</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/sweet-and-sticky-chicken-wings</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/sweet-and-sticky-chicken-wings' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/sweet-and-sticky-chicken-wings</td>
         </tr>
         
         <tr>
@@ -323,13 +358,15 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">s/o</td>
+            <td style="display:none;">s/o</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/ribs_-_instant_pot.html'><strong>Ribs - Instant pot</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://amindfullmom.com/instant-pot-ribs/</td>
+            <td class="source-tag"><a href='https://amindfullmom.com/instant-pot-ribs/' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://amindfullmom.com/instant-pot-ribs/</td>
         </tr>
         
         <tr>
@@ -337,27 +374,31 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">s/o</td>
+            <td style="display:none;">s/o</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/ribs_au_four_et_bbq.html'><strong>Ribs au four et BBQ</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.ricardocuisine.com/recettes/4726-cotes-levees-au-barbecue-les-meilleures-#at_pco=smlrebh-1.0&at_si=5cf2b7d118ccd20a&at_ab=per-2&at_pos=1&at_tot=4</td>
+            <td class="source-tag"><a href='https://www.ricardocuisine.com/recettes/4726-cotes-levees-au-barbecue-les-meilleures-#at_pco=smlrebh-1.0&at_si=5cf2b7d118ccd20a&at_ab=per-2&at_pos=1&at_tot=4' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.ricardocuisine.com/recettes/4726-cotes-levees-au-barbecue-les-meilleures-#at_pco=smlrebh-1.0&at_si=5cf2b7d118ccd20a&at_ab=per-2&at_pos=1&at_tot=4</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/saucisses_-_brocoli_and_cauliflower_gratin_with_pre-cooked_sausage.html'><strong>Saucisses - Brocoli and cauliflower gratin with PRE-COOKED sausage</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.dietdoctor.com/recipes/broccoli-and-cauliflower-gratin-with-sausage</td>
+            <td class="source-tag"><a href='https://www.dietdoctor.com/recipes/broccoli-and-cauliflower-gratin-with-sausage' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.dietdoctor.com/recipes/broccoli-and-cauliflower-gratin-with-sausage</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/saucisses_-_italiennes_braisées_au_vin_rouge.html'><strong>Saucisses - Italiennes braisées au vin rouge</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.ricardocuisine.com/recettes/7264-saucisses-italiennes-braisees-au-vin-rouge</td>
+            <td class="source-tag"><a href='https://www.ricardocuisine.com/recettes/7264-saucisses-italiennes-braisees-au-vin-rouge' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.ricardocuisine.com/recettes/7264-saucisses-italiennes-braisees-au-vin-rouge</td>
         </tr>
         
         <tr>
@@ -365,6 +406,7 @@
             <td>Soupe-repas</td>
             <td>Toute saison</td>
             <td class="source-tag">Keto Instant Pot recipes p 122</td>
+            <td style="display:none;">Keto Instant Pot recipes p 122</td>
         </tr>
         
         <tr>
@@ -372,6 +414,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -379,6 +422,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -386,6 +430,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -393,6 +438,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -400,6 +446,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -407,6 +454,7 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -414,13 +462,15 @@
             <td>Plat principal</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
             <td><a href='recettes/porc/braisé_de_porc_ricardo.html'><strong>Braisé de Porc Ricardo</strong></a></td>
             <td>Plat principal</td>
             <td>Toute saison</td>
-            <td class="source-tag">https://www.ricardocuisine.com/recettes/5009-roti-de-porc-aux-patates-jaunes</td>
+            <td class="source-tag"><a href='https://www.ricardocuisine.com/recettes/5009-roti-de-porc-aux-patates-jaunes' target='_blank'>🔗 Lien Web</a></td>
+            <td style="display:none;">https://www.ricardocuisine.com/recettes/5009-roti-de-porc-aux-patates-jaunes</td>
         </tr>
         
         <tr>
@@ -428,6 +478,7 @@
             <td>Soupe-repas</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -435,6 +486,7 @@
             <td>Accompagnement</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -442,6 +494,7 @@
             <td>Accompagnement</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -449,6 +502,7 @@
             <td>Pain</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -456,6 +510,7 @@
             <td>Petit déjeuner</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -463,6 +518,7 @@
             <td>Petit déjeuner</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -470,6 +526,7 @@
             <td>Marinade</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -477,6 +534,7 @@
             <td>Marinade</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -484,6 +542,7 @@
             <td>Marinade</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle – Compilation.txt</td>
+            <td style="display:none;">Recette personnelle – Compilation.txt</td>
         </tr>
         
         <tr>
@@ -491,6 +550,15 @@
             <td>Plat principal</td>
             <td>Automne / Hiver</td>
             <td class="source-tag">Recette personnelle</td>
+            <td style="display:none;">Recette personnelle</td>
+        </tr>
+        
+        <tr>
+            <td><a href='recettes/desserts/Brownies_patate_douce_chocolat_sans_gluten.html'><strong>Brownies</strong></a></td>
+            <td>Dessert</td>
+            <td>Toute saison</td>
+            <td class="source-tag">Recette personnelle</td>
+            <td style="display:none;">Recette personnelle</td>
         </tr>
         
             </tbody>
@@ -502,11 +570,9 @@
       input = document.getElementById("searchBar");
       filter = input.value.toUpperCase();
       table = document.getElementById("myTable");
-      // On cible tbody pour ne pas masquer les entêtes
       tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
       
       for (i = 0; i < tr.length; i++) {
-        // On prend tout le texte de la ligne (Titre + Cat + Saison + Source)
         txtValue = tr[i].innerText || tr[i].textContent;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           tr[i].style.display = "";
