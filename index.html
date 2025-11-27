@@ -21,7 +21,7 @@
 <title>Mes Recettes</title></head>
     <body>
         <h1>📚 Mes Recettes (66)</h1>
-        <input type="text" id="searchBar" onkeyup="filterTable()" placeholder="Rechercher...">
+        <input type="text" id="searchBar" onkeyup="filterTable()" placeholder="Rechercher (Titre, Saison, Source...)...">
         <table id="myTable">
             <thead>
                 <tr>
@@ -554,7 +554,7 @@
         </tr>
         
         <tr>
-            <td><a href='recettes/desserts/Brownies_patate_douce_chocolat_sans_gluten.html'><strong>Brownies</strong></a></td>
+            <td><a href='recettes/desserts/brownies_patates_douce.html'><strong>Brownies à la patate douce</strong></a></td>
             <td>Dessert</td>
             <td>Toute saison</td>
             <td class="source-tag">Recette personnelle</td>
@@ -571,7 +571,6 @@
       filter = input.value.toUpperCase();
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-      
       for (i = 0; i < tr.length; i++) {
         txtValue = tr[i].innerText || tr[i].textContent;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
